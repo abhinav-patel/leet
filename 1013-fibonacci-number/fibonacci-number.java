@@ -1,19 +1,17 @@
 class Solution 
 {
-    ArrayList<Integer> num=new ArrayList<Integer>();
+    HashMap<Integer,Integer> num=new HashMap<>();
     public int fib(int n) 
     {
         if(n<2)
             return n;
-        if(n<=num.size())
-           return num.get(n);
-        else if(n==num.size()+1)
-        {
-            num.add(num.get(n-1)+num.get(n-2));
-            return num.get(n-1)+num.get(n-2);
-        }
+        else if(num.containsKey(n))
+            return num.get(n);
         else
-           return fib(n-1)+fib(n-2);
-
+        {
+            int res=fib(n-1)+fib(n-2);
+            num.put(n,res);
+            return res;
+        }
     }
 }
