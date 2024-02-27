@@ -1,20 +1,22 @@
 class Solution {
     public boolean isValid(String s) 
     {
-        Stack<Character> st=new Stack<Character>();
-        for(int i=0;i<s.length();i++)
+        char st[]=new char[s.length()];
+        int i=-1;
+        for( char ch:s.toCharArray())
         {
-            if(s.charAt(i)=='('||s.charAt(i)=='{'||s.charAt(i)=='[')
-                st.push(s.charAt(i));
-            else if(!st.isEmpty()&&((s.charAt(i)==')'&& st.peek()=='(')||(s.charAt(i)=='}'&& st.peek()=='{')||(s.charAt(i)==']'&& st.peek()=='[')))
+
+            if(ch=='('||ch=='{'||ch=='[')
+                st[++i]=ch;
+            else if(i>=0&&((ch==')'&& st[i]=='(')||(ch=='}'&& st[i]=='{')||(ch==']'&& st[i]=='[')))
             {
-                st.pop();
+                i--;
             }
             else
                 return false;
             
         }
-        if(st.isEmpty())
+        if(i==-1)
             return true;
         else
             return false;
