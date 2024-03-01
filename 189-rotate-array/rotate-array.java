@@ -18,5 +18,6 @@ class Solution {
             i++;
             j--;
         }
+        System.gc();
     }
 }
