@@ -2,8 +2,7 @@ class Solution {
     public void rotate(int[] nums, int k) 
     {
         int n=nums.length;
-        if(k>=n)
-           k=k%n;
+        k=k%n;
         if(n>1)
         {
         reverse(nums,0,n-k-1);
