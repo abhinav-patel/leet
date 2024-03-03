@@ -41,11 +41,11 @@ public class Solution {
  */
 
         ListNode fast = head;
-        //ListNode slow = head;
+        ListNode slow = head;
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
-            head = head.next;
-            if(fast == head) {
+            slow = slow.next;
+            if(fast == slow) {
                 return true;
             }
         }
