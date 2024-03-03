@@ -25,7 +25,7 @@ public class Solution {
             else
                 return false;
         }
-        System.gc();
+        //System.gc();
         return false;
         
         
