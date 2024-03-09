@@ -2,7 +2,6 @@ class Solution {
     public int reverse(int x) 
     {
         long  c=0;
-        int k=x;
         while(x!=0)
         {
             c=(c*10)+(x%10);
