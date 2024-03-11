@@ -1,20 +1,37 @@
 class Solution {
-    public String customSortString(String order, String s) {
-        char arr[] = s.toCharArray();
-        int n=arr.length;
-        for (int i = 1; i < n; i++) 
+    public String customSortString(String order, String s) 
+    {
+        int count[]=new int[26];
+        for(int i=0;i<s.length();i++)
         {
-            int j = i;
-            while (j > 0 && order.indexOf(arr[j]) < order.indexOf(arr[j - 1])) 
-            {
-                char temp = arr[j];
-                arr[j] = arr[j - 1];
-                arr[j - 1] = temp;
-                j--;
-            }
+            ++count[(int)(s.charAt(i)-'a')];
         }
-        String k=new String(arr);
-        return k;
 
-    }
+        StringBuilder result=new StringBuilder();
+        for(int i=0;i<order.length();i++)
+        {
+            char ch=order.charAt(i);
+            int idx=(int)(ch-'a');
+            int k=count[idx];
+            while(count[idx]-->0)
+                result.append(ch);
+        }
+        for (int i = 0; i < 26; ++i) 
+        {
+        if (count[i] > 0) {
+          char ch = (char)(i + 'a');
+          for (int j = 0; j < count[i]; ++j) {
+            result.append(ch);
+          }
+        }
+      }
+      return result.toString();
+            
+            
+
+        }
+
+
+
+        
 }
