@@ -2,11 +2,11 @@ import java.util.*;
 class Solution {
     public void moveZeroes(int[] arr)
     {
-        int n=arr.length;
-        if(n==1)
+        // int n=arr.length;
+        if(arr.length==1)
             return;
         int j=0;
-        for(int i=0;i<n;i++)
+        for(int i=0;i<arr.length;i++)
         {
             if(arr[i]!=0)
             {   
@@ -14,8 +14,8 @@ class Solution {
                 j++;
             }
         }
-        // Arrays.fill(arr,j,n,0);
-        for(;j<n;j++)
+        // Arrays.fill(arr,j,arr.length,0);
+        for(;j<arr.length;j++)
             arr[j]=0;
         //return arr;
     }
