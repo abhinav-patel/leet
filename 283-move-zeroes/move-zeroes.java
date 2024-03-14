@@ -14,9 +14,11 @@ class Solution {
                 j++;
             }
         }
+        while(j<arr.length)
+            arr[j++]=0;
         // Arrays.fill(arr,j,arr.length,0);
-        for(;j<arr.length;j++)
-            arr[j]=0;
+        // for(;j<arr.length;j++)
+        //     arr[j]=0;
         //return arr;
     }
 }
