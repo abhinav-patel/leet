@@ -3,7 +3,8 @@ class Solution {
     public void moveZeroes(int[] arr)
     {
         int n=arr.length;
-
+        if(n==1)
+            return;
         int j=0;
         for(int i=0;i<n;i++)
         {
