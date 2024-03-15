@@ -14,8 +14,7 @@ class Solution {
                 curr=0;
             }
         }
-        max=Math.max(max,curr);
-        return max;
+        return Math.max(max,curr);
         
     }
 }
