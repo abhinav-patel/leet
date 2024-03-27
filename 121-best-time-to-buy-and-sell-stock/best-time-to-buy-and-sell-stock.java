@@ -7,13 +7,13 @@ class Solution {
 
         for(int i=0;i<prices.length;i++)
         {
-            ltn=(prices[i]<ltn)?prices[i]:ltn;
-            //if(prices[i]<ltn)
-               // ltn=prices[i];
+            //ltn=(prices[i]<ltn)?prices[i]:ltn;
+            if(prices[i]<ltn)
+               ltn=prices[i];
             pist=prices[i]-ltn;
             mp=(pist>mp)?pist:mp;
-            //if(pist>mp)
-                //mp=pist;
+            if(pist>mp)
+                mp=pist;
         }
         return mp;
 
