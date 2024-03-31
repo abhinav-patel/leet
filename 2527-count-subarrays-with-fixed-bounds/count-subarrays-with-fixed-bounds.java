@@ -1,15 +1,21 @@
 class Solution 
 {
     //copy
-    public long countSubarrays(int[] A, int minK, int maxK) 
+    public long countSubarrays(int[] nums, int minK, int maxK) 
     {
-        long res = 0, jbad = -1, jmin = -1, jmax = -1, n = A.length;
-                for (int i = 0; i < n; ++i) {
-                            if (A[i] < minK || A[i] > maxK) jbad = i;
-                                        if (A[i] == minK) jmin = i;
-                                                    if (A[i] == maxK) jmax = i;
-                                                                res += Math.max(0L, Math.min(jmin, jmax) - jbad);
-                                                                        }
-                                                                                return res;
+        int minI = -1, maxI = -1, left = -1, right = 0;
+                long count = 0;
+                        while(right < nums.length){
+                                    if(nums[right] < minK || nums[right] > maxK){
+                                                    minI = right;
+                                                                    maxI = right;
+                                                                                    left = right;
+                                                                                                }
+                                                                                                            minI = nums[right] == minK ? right : minI;
+                                                                                                                        maxI = nums[right] == maxK ?  right : maxI;
+                                                                                                                                    count += Math.min(minI, maxI) - left;
+                                                                                                                                                right++;
+                                                                                                                                                        }
+                                                                                                                                                                return count;
     }
 }
