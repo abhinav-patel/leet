@@ -4,7 +4,7 @@ class Solution {
         for (int i = num.length()-1; i >= 0; i--) 
         {
             char ch=num.charAt(i);
-            int k=Character.getNumericValue(ch);
+            int k=ch-'0';
             if(k%2==1)
                 return num.substring(0,i+1);
         }
