@@ -1,6 +1,8 @@
 class Solution {
     public List<Integer> majorityElement(int[] nums) 
     {
+        if(nums.length==0)
+           return new ArrayList<Integer>();
         //Boyer-Moore majority votinng algo
         int a=0,b=0,avote=0,bvote=0;
         //first pass is for choosing the candidates
