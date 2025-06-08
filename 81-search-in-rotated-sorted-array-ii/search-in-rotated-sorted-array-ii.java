@@ -9,7 +9,7 @@ class Solution {
             if(nums[mid]==target)
                return true;
 
-            if(nums[start]==nums[mid] && nums[mid]==nums[end])
+            if(nums[start]==nums[mid] && nums[mid]==nums[end])//change for duplicates
             {
                 start++;
                 end--;
