@@ -15,7 +15,7 @@ class Solution {
             }
             return ans;
         }
-        if(nums.length==2)
+        /*if(nums.length==2)
         {
             if(nums[0]==target && nums[1]==target)
             {
@@ -37,7 +37,7 @@ class Solution {
             }
             return ans;
 
-        }
+        }*/
         int start=0;
         int end=nums.length-1;
         
