@@ -24,10 +24,10 @@ class Solution {
         for(int pile:piles)
         {
             hours += (pile + speed - 1L) / speed;
+            if(hours>hrs)
+            return false;
         }
-        if(hours<=hrs)
-            return true;
-        return false;
+        return true;
     }
     private int getMax(int[] piles) {
     int max = 0;
