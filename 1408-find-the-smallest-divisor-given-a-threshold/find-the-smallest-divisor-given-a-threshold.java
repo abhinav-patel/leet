@@ -1,7 +1,7 @@
 class Solution {
     public int smallestDivisor(int[] nums, int threshold) 
     {
-        int low=1,high=1000000000;
+        int low=1,high=1000000;
 
         while(low<high)
         {
