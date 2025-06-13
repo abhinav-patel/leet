@@ -5,7 +5,7 @@ class Solution {
 
         while(low<high)
         {
-            int mid=(low+high)/2;
+            int mid=(low+high)>>1;
             int sum=0;
             for(int i:nums)
             {
