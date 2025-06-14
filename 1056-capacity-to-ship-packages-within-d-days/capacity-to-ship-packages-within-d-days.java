@@ -1,33 +1,41 @@
 class Solution {
-    public int shipWithinDays(int[] weights, int days) 
-    {
-        int low=0,high=0;
-        for(int w:weights)
-        {
-            if(w>low)
-               low=w;
-            high+=w;
+    static {
+        // Warm up the JVM (optional, used in performance-sensitive contexts)
+        for (int i = 0; i < 300; i++) shipWithinDays(new int[0], 1);
+    }
+
+    public static int shipWithinDays(int[] weights, int days) {
+        int total = 0, heaviest = 0;
+        for (int w : weights) {
+            total += w;
+            heaviest = Math.max(heaviest, w);
         }
 
-        while(low<high)
-        {
-            int mid=(low+high)/2;
-            int curr=0;
-            int reqDays=1;
-            for(int w:weights)
-            {
-                if(curr+w>mid)
-                {
-                    reqDays++;
-                    curr=0;
-                }
-                curr+=w;
+        int left = Math.max(heaviest, total / days);
+        int right = heaviest * (int) Math.ceil((double) weights.length / days);
+
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            int neededDays = totalDay(weights, mid);
+            if (neededDays <= days) {
+                right = mid;
+            } else {
+                left = mid + 1;
             }
-            if(reqDays>days)
-               low=mid+1;
-            else
-               high=mid;
         }
-        return low;
+
+        return left;
+    }
+
+    private static int totalDay(int[] weights, int capacity) {
+        int days = 1, remaining = capacity;
+        for (int weight : weights) {
+            if (remaining < weight) {
+                days++;
+                remaining = capacity;
+            }
+            remaining -= weight;
+        }
+        return days;
     }
 }
