@@ -9,7 +9,7 @@ class Solution {
         while(low<=high)
         {
             int mid=low+(high-low)/2;
-            if(matrix[mid/n][mid%n]==target)
+            if(matrix[mid/n][mid%n]==target) // making sigle list into matrix
                return true;
             else if(matrix[mid/n][mid%n]<target)
                low=mid+1;
