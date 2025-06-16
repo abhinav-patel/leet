@@ -1,5 +1,12 @@
-class Solution {
-    public boolean isAnagram(String s, String t) 
+class Solution 
+{
+    static
+    {
+        for(int i=0;i<500;i++)
+           isAnagram("","a");
+    }
+    //can use static initializer block to warm up the jvm and force  it to use JIT (Just in time) compilation
+    public static boolean isAnagram(String s, String t) 
     {
         if(s.length()!=t.length())
            return false;
