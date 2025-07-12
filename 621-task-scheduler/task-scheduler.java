@@ -1,3 +1,4 @@
+import static java.lang.Math.*;
 class Solution 
 {
     // this solution is very slow
@@ -27,7 +28,7 @@ class Solution
             }
             total=total+i;
         }
-        return Math.max(total,(max-1)*(n+1)+curr);
+        return max(total,(max-1)*(n+1)+curr);
     }
 
     /*
