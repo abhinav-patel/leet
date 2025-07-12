@@ -1,4 +1,36 @@
-class Solution {
+class Solution 
+{
+    // this solution is very slow
+    //mathematical solution is the fastest
+
+    public int leastInterval(char[] tasks, int n)
+    {
+        int freq[]=new int[26];
+        for(char i:tasks)
+        {
+            freq[i-'A']++;
+        }
+        int max=0;
+        int curr=0;
+        int total=0;
+
+        for(int i:freq)
+        {
+            if(i>max)
+            {
+                max=i;
+                curr=1;
+            }
+            else if(i==max)
+            {
+                curr++;
+            }
+            total=total+i;
+        }
+        return Math.max(total,(max-1)*(n+1)+curr);
+    }
+
+    /*
     public int leastInterval(char[] tasks, int n)
     {
         Map<Character,Integer> map=new HashMap<>();
@@ -40,4 +72,5 @@ class Solution {
         }
         return count;
     }
+    */
 }
