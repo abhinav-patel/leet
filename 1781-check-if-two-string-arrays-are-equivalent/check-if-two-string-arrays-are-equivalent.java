@@ -11,7 +11,7 @@ class Solution {
         {
             b=b.concat(s);
         }
-        return a.compareTo(b)==0?true:false;
+        return a.equals(b);
         
     }
 }
