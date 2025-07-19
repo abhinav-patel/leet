@@ -27,7 +27,7 @@ class Solution {
             {
                 if(str.charAt(i)=='/' && set.contains(str.substring(0,i)))
                 {
-                    res.remove(str);
+                    res.remove(res.size()-1);
                     break;
                 }
             }
