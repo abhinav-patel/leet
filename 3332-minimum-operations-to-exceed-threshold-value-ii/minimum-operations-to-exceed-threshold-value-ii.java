@@ -2,22 +2,22 @@ class Solution {
     public int minOperations(int[] nums, int k) 
     {
         Arrays.sort(nums);
-        for(int i=0,j=0,count=0,x,y;;count++)
+        for(int i=0,j=0,c=0,x,y;;c++)
         {
-            if((i<nums.length)&&(j>=count||nums[i]<=nums[j]))
+            if((i<nums.length)&&(j>=c||nums[i]<=nums[j]))
                x=nums[i++];
             else
                x=nums[j++];
             if(x>=k)
-               return count;
+               return c;
             
-            if((i<nums.length)&&(j>=count||nums[i]<=nums[j]))
+            if((i<nums.length)&&(j>=c||nums[i]<=nums[j]))
                y=nums[i++];
             else
                y=nums[j++];
 
             long temp=2L*x+y;
-            nums[count]=temp<k?(int)temp:k;
+            nums[c]=temp<k?(int)temp:k;
         }
         /*PriorityQueue<Integer> pq=new PriorityQueue<>();
         for(int n:nums)
