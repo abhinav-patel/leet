@@ -2,7 +2,9 @@ class Solution {
     public int maximumUniqueSubarray(int[] nums) 
     {
         int last[]=new int[10001];
-        Arrays.fill(last,-1);
+        for(int i=0;i<10001;i++)
+           last[i]=-1;
+        //Arrays.fill(last,-1);
 
         int prefix[]=new int[nums.length+1];
         prefix[0]=0;
