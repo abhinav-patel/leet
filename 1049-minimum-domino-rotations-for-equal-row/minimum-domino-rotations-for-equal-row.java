@@ -29,7 +29,7 @@ class Solution {
             }
             if(possible)
                res=Math.min(res,Math.min(top,bottom));
-            //else return -1;
+            else return -1;
         }
         return res==Integer.MAX_VALUE?-1:res;
         
