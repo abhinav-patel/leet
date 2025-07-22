@@ -1,7 +1,30 @@
-class Solution {
+class Solution 
+{
+    public int helper(int tops[],int bottoms[],int x)
+    {
+        int top=0,bottom=0;
+        for(int i=0;i<tops.length;i++)
+        {
+            if(tops[i]!=x && bottoms[i]!=x)
+               return -1;
+            else if(tops[i]!=x)
+               top++;
+            else if(bottoms[i]!=x)
+               bottom++;
+        }
+        return Math.min(top,bottom);
+    }
     public int minDominoRotations(int[] tops, int[] bottoms) 
     {
-        int res=Integer.MAX_VALUE;
+        int res=-1;
+        for(int i=1;i<=6;i++)
+        {
+            int curr=helper(tops,bottoms,i);
+            if(curr!=-1 &&(res==-1||curr<res))
+               res=curr;
+        }
+        return res;
+        /*int res=Integer.MAX_VALUE;
         int face[]=new int[7];
         for(int i=0;i<tops.length;i++)
         {
@@ -32,6 +55,7 @@ class Solution {
             else return -1;
         }
         return res==Integer.MAX_VALUE?-1:res;
+        */
         
     }
 }
