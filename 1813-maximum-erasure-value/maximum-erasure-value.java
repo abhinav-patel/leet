@@ -7,7 +7,7 @@ class Solution {
         //Arrays.fill(last,-1);
 
         int prefix[]=new int[nums.length+1];
-        prefix[0]=0;
+        //prefix[0]=0;
         
         int sum=0;
         for(int l=-1,r=0;r<nums.length;r++)
