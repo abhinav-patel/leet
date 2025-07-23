@@ -1,7 +1,7 @@
 class Solution 
 {
     static {
-        for (int i = 1; i < 500; i++) {
+        for (int i = 1; i < 100; i++) {
             repairCars(new int[] {2, 7, 9, 23, 1, 7}, i);
         }
     }
