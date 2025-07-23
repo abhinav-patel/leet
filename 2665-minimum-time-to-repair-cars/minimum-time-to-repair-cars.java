@@ -3,8 +3,7 @@ class Solution {
     {
         if(ranks.length==1)
         {
-           long res=(long)ranks[0]*cars*cars;
-           return res;
+           return (long)ranks[0]*cars*cars;
         }
         long left=1,right=(long)1e14;
         for(int r:ranks)
