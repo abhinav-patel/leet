@@ -1,5 +1,11 @@
-class Solution {
-    public long repairCars(int[] ranks, int cars) 
+class Solution 
+{
+    static {
+        for (int i = 1; i < 100; i++) {
+            repairCars(new int[] {2, 7, 9, 23, 1, 7}, i);
+        }
+    }
+    public static long repairCars(int[] ranks, int cars) 
     {
         if(ranks.length==1)
         {
@@ -22,7 +28,7 @@ class Solution {
         }
         return left;   
     }
-    public  boolean feasible(long mid,int ranks[],int cars)
+    public static boolean feasible(long mid,int ranks[],int cars)
     {
         long sum=0;
         for(int r:ranks)
