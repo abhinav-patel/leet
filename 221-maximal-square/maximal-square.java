@@ -1,5 +1,6 @@
 class Solution 
 {
+    //just to get on top :)
     static 
     {
         for(int i = 0 ; i < 500 ; i++){
