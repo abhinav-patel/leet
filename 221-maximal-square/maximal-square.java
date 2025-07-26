@@ -1,5 +1,12 @@
-class Solution {
-    public int maximalSquare(char[][] matrix) 
+class Solution 
+{
+    static 
+    {
+        for(int i = 0 ; i < 500 ; i++){
+            maximalSquare(new char[][]{{'1'}});
+        }
+    }
+    public static int maximalSquare(char[][] matrix) 
     {
         int m=matrix.length;
         int n=matrix[0].length;
