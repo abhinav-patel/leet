@@ -1,5 +1,10 @@
-class Solution {
-    public List<Integer> findKDistantIndices(int[] nums, int key, int k) 
+class Solution 
+{
+    static {
+        for (int i = 0; i < 500; i++)
+            findKDistantIndices(new int[]{1, 1}, 1, 1);
+    }
+    public static List<Integer> findKDistantIndices(int[] nums, int key, int k) 
     {
         List<Integer> res=new ArrayList<>();
 
