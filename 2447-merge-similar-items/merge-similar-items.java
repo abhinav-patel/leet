@@ -1,7 +1,30 @@
 class Solution {
     public List<List<Integer>> mergeSimilarItems(int[][] items1, int[][] items2) 
     {
-        TreeMap<Integer,Integer> map=new TreeMap<>();
+        int map[]=new int[1001];
+        for(int i=0;i<items1.length;i++)
+        {
+           map[items1[i][0]]+=items1[i][1];
+        }
+        for(int i=0;i<items2.length;i++)
+        {
+           map[items2[i][0]]+=items2[i][1];
+        }
+        List<List<Integer>> res=new ArrayList<>();
+        for(int i=1;i<1001;i++)
+        {
+            if(map[i]>0)
+               res.add(List.of(i,map[i]));
+        }
+        return res;
+          
+
+
+
+
+
+
+        /*TreeMap<Integer,Integer> map=new TreeMap<>();
 
         for(int arr[]:items1)
            map.put(arr[0],arr[1]);
@@ -14,6 +37,7 @@ class Solution {
         {
             res.add(Arrays.asList(e.getKey(),e.getValue()));
         }
-        return res;  
+        return res;
+        */
     }
 }
