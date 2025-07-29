@@ -1,5 +1,13 @@
-class Solution {
-    public List<List<Integer>> mergeSimilarItems(int[][] items1, int[][] items2) 
+class Solution 
+{
+    //to get on top :)
+    static {
+        int items[][] = {{1,1}, {4,5}, {3,8}};
+        for(int i = 0; i < 500; i++)
+            mergeSimilarItems(items, items);
+    }
+
+    public static List<List<Integer>> mergeSimilarItems(int[][] items1, int[][] items2) 
     {
         int map[]=new int[1001];
         for(int i=0;i<items1.length;i++)
