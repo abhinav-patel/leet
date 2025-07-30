@@ -1,7 +1,47 @@
 class Solution {
-    public int minOperations(int[][] grid, int x) 
-    {
-        ArrayList<Integer> arr=new ArrayList<>();
+    public int minOperations(int[][] grid, int x) {
+        int m = grid.length;
+        int n = grid[0].length;
+        int len = m * n;
+        if (len < 2)
+            return 0;
+        int freq[] = new int[10001];
+        int rem = grid[0][0] % x;
+        for (int i = 0; i < m; i++) 
+        {
+            for (int j = 0; j < n; j++) 
+            {
+                if (grid[i][j] % x != rem)
+                    return -1;
+                freq[grid[i][j]]++;
+            }
+        }
+
+        int c=0;
+        int median=0;
+        int index=(len+1)/2;
+        for(int i=0;i<freq.length;i++)
+        {
+            if(freq[i]==0)
+               continue;
+            c+=freq[i];
+            if(c>=index)
+            {
+                median=i;
+                break;
+            }
+        }
+
+        int ans=0;
+        for(int i=0;i<freq.length;i++)
+        {
+            if(freq[i]>0)
+               ans+=(Math.abs(i-median)/x)*freq[i];
+        }
+        return ans;
+        
+
+        /*ArrayList<Integer> arr=new ArrayList<>();
         for(int a[]:grid)
         {
             for(int n:a)
@@ -18,6 +58,7 @@ class Solution {
             c+=diff/x;
         }
         return c;
-        
+        */
+
     }
 }
