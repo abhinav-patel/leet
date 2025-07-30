@@ -14,9 +14,10 @@ class Solution {
                 while(i<nums.length && nums[i]==max)
                 {
                     temp++;
-                    c=Math.max(c,temp);
+                    //c=Math.max(c,temp);
                     i++;
                 }
+                c=Math.max(c,temp);
             }
         }
         return c;
