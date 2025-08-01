@@ -2,41 +2,28 @@ class Solution {
     public List<List<Integer>> generate(int n) 
     {
         List<List<Integer>> res=new ArrayList<>();
-
-        ArrayList<Integer> first=new ArrayList<>();
-        first.add(1);
-
-        ArrayList<Integer> second=new ArrayList<>();
-        second.add(1);
-        second.add(1);
-
-        if(n==1)
-           res.add(first);
-        
-        else if(n==2)
+        helper(res,0,n);
+        return res;
+    }
+    public void helper(List<List<Integer>> res,int i,int n)
+    {
+        List<Integer> temp=new ArrayList<>();
+        if(i>=n)
+           return;
+        else if(i==0)
         {
-            res.add(first);
-            res.add(second);
+            temp.add(1);
         }
         else
         {
-            res.add(first);
-            res.add(second);
-            for(int i=2;i<n;i++)
+            temp.add(1);
+            for(int j=1;j<i;j++)
             {
-                ArrayList<Integer> t=new ArrayList<>();
-                t.add(1);
-                int k=1;
-                while(k<=i-1)
-                {
-                    t.add(res.get(i-1).get(k-1)+res.get(i-1).get(k));
-                    k++;
-                }
-                t.add(1);
-                res.add(t);
+                temp.add(res.get(i-1).get(j-1)+res.get(i-1).get(j));
             }
+            temp.add(1);
         }
-        return res;
-        
+        res.add(temp);
+        helper(res,i+1,n);
     }
 }
