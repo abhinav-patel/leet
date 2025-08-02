@@ -1,12 +1,12 @@
 class Solution 
 {
-    static 
-    {
-        for (int i = 0; i < 300; i++) 
-        {
-            maxSubsequence(new int[1], 1);
-        }
-    }
+    // static 
+    // {
+    //     for (int i = 0; i < 300; i++) 
+    //     {
+    //         maxSubsequence(new int[1], 1);
+    //     }
+    // }
     public static int[] maxSubsequence(int[] nums, int k) 
     {
         int n=nums.length;
