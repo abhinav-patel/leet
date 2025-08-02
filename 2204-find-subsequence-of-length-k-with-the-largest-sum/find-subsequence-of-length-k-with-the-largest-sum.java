@@ -10,8 +10,8 @@ class Solution
     public static int[] maxSubsequence(int[] nums, int k) 
     {
         int n=nums.length;
-        if(n==1 || k==n)
-           return nums;
+        // if(n==1 || k==n)
+        //    return nums;
         int temp[][]=new int[n][2];
         for(int i=0;i<nums.length;i++)
         {
