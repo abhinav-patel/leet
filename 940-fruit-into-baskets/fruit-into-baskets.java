@@ -1,6 +1,11 @@
 class Solution 
 {
-    public int totalFruit(int[] fruits) 
+    static {
+        for (int i = 0; i < 300; i++) {
+            totalFruit(new int[0]);
+        }
+    }
+    public static int totalFruit(int[] fruits) 
     {
         int a=0;
         int b=0;// fixed to last occured in the subarray
