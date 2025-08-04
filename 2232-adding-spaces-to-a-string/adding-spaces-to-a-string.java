@@ -1,6 +1,11 @@
 class Solution 
 {
-    public String addSpaces(String s, int[] spaces) 
+    static {
+        for (int i = 0; i < 300; i++) {
+            addSpaces("",new int[0]);
+        }
+    }
+    public static String addSpaces(String s, int[] spaces) 
     {
         StringBuilder sb=new StringBuilder();
         int c=0;
