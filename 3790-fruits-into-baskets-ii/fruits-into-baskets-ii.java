@@ -6,7 +6,7 @@ class Solution {
         {
             for(int j=0;j<baskets.length;j++)
             {
-                if(baskets[j]!=-1 && baskets[j]>=fruits[i])
+                if( baskets[j]>=fruits[i])
                 {
                     baskets[j]=-1;
                     c++;
