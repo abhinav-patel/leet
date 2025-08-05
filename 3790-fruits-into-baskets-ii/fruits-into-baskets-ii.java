@@ -8,7 +8,6 @@ class Solution {
             {
                 if(baskets[j]!=-1 && baskets[j]>=fruits[i])
                 {
-                    fruits[i]=-1;
                     baskets[j]=-1;
                     c++;
                     break;
