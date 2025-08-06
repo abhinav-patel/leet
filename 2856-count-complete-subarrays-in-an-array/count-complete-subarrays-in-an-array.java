@@ -1,6 +1,9 @@
 class Solution {
     public int countCompleteSubarrays(int[] nums) 
     {
+        // since  nums[i]<=2000
+
+        //can use boolean array visited to count distint
         int n=nums.length;
         Set<Integer> distinct=new HashSet<>();
         for(int k:nums)
