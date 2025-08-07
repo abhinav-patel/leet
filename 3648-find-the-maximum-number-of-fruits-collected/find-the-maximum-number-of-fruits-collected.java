@@ -11,7 +11,7 @@ class Solution
         {
             res+=fruits[i][i];
             Arrays.fill(memo[i],-1);
-            fruits[i][i]=0;
+            fruits[i][i]=0; //imp
         }
         
         res=res+dfs2(0,n-1,fruits)+dfs3(n-1,0,fruits);
@@ -43,7 +43,7 @@ class Solution
 
     public int dfs3(int i, int j, int fruits[][])
     {
-        if(i>=n ||i<0||j<0|| j>=n)
+        if(i>=n || j>=n)
            return 0;
         
         if(memo[i][j]!=-1)
