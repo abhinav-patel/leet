@@ -31,7 +31,8 @@ class Solution
         if(i==j)
            res=Math.max(res,dfs2(i+1,j+1,fruits));
         else if(i==j-1)
-           res=Math.max(res,Math.max(dfs2(i+1,j,fruits),dfs2(i+1,j+1,fruits)));
+        res=Math.max(res,dfs2(i+1,j+1,fruits));
+           //res=Math.max(res,Math.max(dfs2(i+1,j,fruits),dfs2(i+1,j+1,fruits)));
                                     //South              //South east
         else
            res=Math.max(res,Math.max(dfs2(i+1,j-1,fruits),Math.max(dfs2(i+1,j,fruits),dfs2(i+1,j+1,fruits))));
@@ -55,7 +56,8 @@ class Solution
            res=Math.max(res,dfs3(i+1,j+1,fruits));
                                  
         else if(i-1==j)
-           res=Math.max(res,Math.max(dfs3(i,j+1,fruits),dfs3(i+1,j+1,fruits)));
+        res=Math.max(res,dfs3(i+1,j+1,fruits));
+           //res=Math.max(res,Math.max(dfs3(i,j+1,fruits),dfs3(i+1,j+1,fruits)));
         else
            res=Math.max(res,Math.max(dfs3(i-1,j+1,fruits),Math.max(dfs3(i,j+1,fruits),dfs3(i+1,j+1,fruits))));
 
