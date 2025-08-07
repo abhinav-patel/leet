@@ -28,10 +28,10 @@ class Solution
         int val=fruits[i][j];
         int res=0;
 
-        if(i==j)
+        if(i==j || i==j-1)
            res=Math.max(res,dfs2(i+1,j+1,fruits));
-        else if(i==j-1)
-        res=Math.max(res,dfs2(i+1,j+1,fruits));
+        //else if(i==j-1)
+        //res=Math.max(res,dfs2(i+1,j+1,fruits));
            //res=Math.max(res,Math.max(dfs2(i+1,j,fruits),dfs2(i+1,j+1,fruits)));
                                     //South              //South east
         else
@@ -52,11 +52,11 @@ class Solution
         int val=fruits[i][j];
         int res=0;
 
-        if(i==j)
+        if(i==j || i-1==j)
            res=Math.max(res,dfs3(i+1,j+1,fruits));
                                  
-        else if(i-1==j)
-        res=Math.max(res,dfs3(i+1,j+1,fruits));
+        //else if(i-1==j)
+        //res=Math.max(res,dfs3(i+1,j+1,fruits));
            //res=Math.max(res,Math.max(dfs3(i,j+1,fruits),dfs3(i+1,j+1,fruits)));
         else
            res=Math.max(res,Math.max(dfs3(i-1,j+1,fruits),Math.max(dfs3(i,j+1,fruits),dfs3(i+1,j+1,fruits))));
