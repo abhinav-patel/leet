@@ -20,7 +20,7 @@ class Solution
 
     public int dfs2(int i, int j, int fruits[][])
     {
-        if(i<0||j<0|| i>=n || j>=n)
+        if(/*i<0||j<0||*/ i>=n || j>=n)
             return 0;
         if(memo[i][j]!=-1)
            return memo[i][j];
