@@ -20,11 +20,12 @@ class Solution {
                    res.add(i);
             }
         }
-        int arr[]=new int[res.size()];
-        int c=0;
-        for(int n:res)
-           arr[c++]=n;
-        return arr;
+        return res.stream().mapToInt(Integer::intValue).toArray();
+        // int arr[]=new int[res.size()];
+        // int c=0;
+        // for(int n:res)
+        //    arr[c++]=n;
+        // return arr;
         
 
         
