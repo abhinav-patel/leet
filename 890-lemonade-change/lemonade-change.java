@@ -1,6 +1,14 @@
-class Solution {
-    public boolean lemonadeChange(int[] bills) 
+class Solution 
+{
+    static{
+        for(int i=0;i<500;i++){
+            lemonadeChange(new int[]{5});
+        }
+    }
+    public static boolean lemonadeChange(int[] bills) 
     {
+        // if(bill==null)
+        //    return false;
         int a =0, b=0, c=0;
         for(int n:bills)
         {
