@@ -3,7 +3,7 @@ class Solution
     List<String> res=new ArrayList<>();
     public List<String> letterCombinations(String digits) 
     {
-        if(digits.isEmpty())
+        if(digits.length()==0)
            return res;
         recursive(digits,0,"");
         return res;   
