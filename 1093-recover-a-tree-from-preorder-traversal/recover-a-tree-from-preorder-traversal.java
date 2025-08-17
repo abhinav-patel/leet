@@ -39,6 +39,8 @@ class Solution
             
             TreeNode temp=new TreeNode(n);
             levels.put(currLevel, temp);
+
+            //Since it is a preorder traversal...hence the root will be always registered first so no worries of right tree nodes getting registered without their parents;
             if(currLevel>0)
             {
                 TreeNode parent=levels.get(currLevel-1);
