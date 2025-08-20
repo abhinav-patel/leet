@@ -10,6 +10,6 @@ class Solution {
             freq[nums[i]]++;
         }
 
-        return (int)Math.ceil((double)(i+1)/3);    
+        return (i+3)/3;//(int)Math.ceil((double)(i+1)/3);    
     }
 }
