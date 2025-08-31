@@ -1,5 +1,11 @@
-class Solution {
-    public int[] dailyTemperatures(int[] temp) 
+class Solution 
+{
+    static {
+        int [] temp = {30, 60, 90};
+        for(int i = 0; i < 500; i++)
+            dailyTemperatures(temp);
+    }
+    public static int[] dailyTemperatures(int[] temp) 
     {
         int n=temp.length;
         int ans[]=new int[n];
