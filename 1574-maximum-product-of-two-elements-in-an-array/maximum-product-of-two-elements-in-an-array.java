@@ -11,9 +11,7 @@ class Solution {
                 a=nums[i];
             }
             else if(nums[i]>b)
-            {
                 b=nums[i];
-            }
         }
         return (a-1)*(b-1);   
     }
