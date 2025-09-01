@@ -5,13 +5,15 @@ class Solution {
 
         for(int item[]: classes)
         {
-            maxHeap.offer(new double[]{increment(item[0],item[1]),item[0],item[1]});
+            double incr=((item[0]+1.0)/(item[1]+1.0))-(item[0]*1.0/item[1]);
+            maxHeap.offer(new double[]{incr,item[0],item[1]});
         }
 
         while(extra>0)
         {
             double top[]=maxHeap.poll();
-            maxHeap.offer(new double[]{increment(top[1]+1,top[2]+1),top[1]+1,top[2]+1});
+            double incr=((top[1]+2.0)/(top[2]+2.0))-((top[1]+1.0)/(top[2]+1.0));
+            maxHeap.offer(new double[]{incr,top[1]+1,top[2]+1});
             extra--;
         }
 
@@ -19,13 +21,10 @@ class Solution {
         while(maxHeap.isEmpty()==false)
         {
             double top[]=maxHeap.poll();
-            ans+=(top[1]/top[2]);
+            ans+=(top[1]*1.0/top[2]);
         }
         return ans/classes.length;   
     }
 
-    public double increment(double a,double b)
-    {
-        return ((a+1)/(b+1))-(a/b);
-    }
+    
 }
