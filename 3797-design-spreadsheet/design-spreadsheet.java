@@ -13,7 +13,7 @@ class Spreadsheet
     
     public void resetCell(String cell) 
     {
-        map.put(cell,0);
+        map.remove(cell);
     }
     
     public int getValue(String formula) 
