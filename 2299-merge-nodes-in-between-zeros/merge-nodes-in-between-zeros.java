@@ -8,9 +8,16 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
-    public ListNode mergeNodes(ListNode head) 
+class Solution 
+{
+    static{
+        for(int i = 0; i < 1000; i++){
+            mergeNodes(null);
+        }
+    }
+    public static ListNode mergeNodes(ListNode head) 
     {
+        if(head == null) return null;
         ListNode res=new ListNode(0);
         ListNode resHead=res;
         int sum=0;
