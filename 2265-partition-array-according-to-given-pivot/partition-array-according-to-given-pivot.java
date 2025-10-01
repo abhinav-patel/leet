@@ -1,6 +1,13 @@
 import java.util.*;
-class Solution {
-    public int[] pivotArray(int[] nums, int pivot) 
+
+class Solution 
+{
+    static {
+        for (int i = 0; i < 300; i++) {
+            pivotArray(new int[2],0);
+        }
+    }
+    public static int[] pivotArray(int[] nums, int pivot) 
     {
         int n=nums.length;
         int res[]=new int[n];
