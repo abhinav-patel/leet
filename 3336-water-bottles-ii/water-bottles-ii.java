@@ -1,4 +1,6 @@
-class Solution {
+class Solution 
+{
+    //few changes from the previous solution
     public int maxBottlesDrunk(int numBottles, int numExchange) 
     {
         int c=numBottles;
@@ -15,6 +17,7 @@ class Solution {
         
     }
 }
+//from previous soln
 // int c=numBottles;
 //         int empty=numBottles;
 //         while(empty>=numExchange)
