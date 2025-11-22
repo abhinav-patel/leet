@@ -1,5 +1,17 @@
-class Solution {
-    public int[] countPoints(int[][] points, int[][] queries) 
+class Solution
+{
+    static {
+        int[][] p = {
+            {1,3},{3,3},{5,3},{2,2}
+        };
+        int[][] q = {
+            {2,3,1},{4,3,1},{1,1,2}
+        };
+        for (int i = 0; i < 500; i++) {
+            countPoints(p, q);
+        }
+    }
+    public static int[] countPoints(int[][] points, int[][] queries) 
     {
         int n=points.length;
         int m=queries.length;
