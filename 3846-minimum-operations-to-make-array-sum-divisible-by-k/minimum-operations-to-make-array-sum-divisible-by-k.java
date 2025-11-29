@@ -5,8 +5,10 @@ class Solution {
         for(int i:nums)
         {
             s+=i;
+            if(s>=k)
+                s=s%k;
         }
-        return s%k;
+        return s;
         
     }
 }
