@@ -6,10 +6,6 @@ class Solution {
         {
             int t=i;
             String curr=String.valueOf(t);
-            // for(char ch=curr.charAt(1);ch<curr.charAt(curr.length());ch++)
-            // {
-            //     if(ch>curr)
-            // }
             for(int j=1;j<curr.length()-1;j++)
             {
                 char k=curr.charAt(j);
